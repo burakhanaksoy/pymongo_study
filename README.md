@@ -1,0 +1,2 @@
+# pymongo_study
+pymongo
