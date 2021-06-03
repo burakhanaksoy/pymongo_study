@@ -6,10 +6,10 @@ from bson.objectid import ObjectId
 
 
 class MongoStudy:
-    def __init__(self):
+    def __init__(self,db_name,collection_name):
         self.client = pymongo.MongoClient('mongodb://127.0.0.1:27017/')
-        self.mydb = self.client['burak_db']
-        self.collection = self.mydb['my_collection']
+        self.mydb = self.client[db_name]
+        self.collection = self.mydb[collection_name]
         self.post = {'id': 1,
                      "author": "Mike",
                      "text": "My first blog post!",
